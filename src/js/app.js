@@ -1,4 +1,6 @@
-import mainCss from '../css/main.css';
+import '../css/grid.css';
+import '../css/main.css';
+
 (function () {
     'use strict';
 
