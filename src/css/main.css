@@ -1,7 +1,6 @@
 
 body {
   padding-left: 5%;
-  padding-right: 5%;
   padding-top: 13%;
   width: 90%;
 }
@@ -63,16 +62,52 @@ footer {
 .project {
   margin-left: 5px;
   margin-right: 5px;
-  padding: 5px;
-  border: 1px solid grey;
+  text-align: center;
+}
+
+.project h3{
+  display:none;
+  padding-top: 50px;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5em;
+  color: white;
+}
+
+.project summary {
+  display: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2em;
+  color: white;
 }
 
 .project.pink {
   background-color: #FFB6C1;
+  background: url(../assets/laptop.jpg) no-repeat center;
+  height: 326px;
 }
 
 .project.blue {
   background-color: #ADD8E6;
+  background: url(../assets/wave.jpg) no-repeat center;;
+  height: 326px;
+}
+
+.project:hover h3{
+  display: inline-block;
+}
+
+.project:hover summary{
+  display: block;
+}
+
+.project.blue:hover {
+  opacity: .5;
+  transition: all 0.25s ease-out;
+}
+
+.project.pink:hover {
+  opacity: .5;
+  transition: all 0.25s ease-out;
 }
 
 @media screen and (max-width: 900px) and (min-width: 501px) {
