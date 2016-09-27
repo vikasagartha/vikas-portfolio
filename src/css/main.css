@@ -1,17 +1,20 @@
+#wrap { 
+  width: 86%; 
+  margin: 0 auto; 
+}
 
 body {
-  padding-left: 5%;
-  width: 90%;
   font-family: 'Lato', sans-serif;
+  letter-spacing: .2em;
 }
 
 .header {
-  margin-top: 3%;
-  margin-bottom: 3%;
+  margin-top: 5%;
+  margin-bottom: 10%;
 }
 
 #logo, header{
-  float: right;
+  float: left;
 }
 
 #logo {
@@ -20,9 +23,38 @@ body {
   margin-right: 1em;
 }
 
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li:not(:first-child) {
+  padding-left: 3em;
+}
+
+nav ul li.selected {
+  padding: 0 .5em .5em .5em;
+  padding-left: .5em;
+  padding-right: .5em;
+  border-bottom: .1em solid grey;
+}
+
+nav ul li.selected {
+  border-bottom: .1em solid grey;
+}
+
 h1 {
   font-size: 2.75em; 
   font-weight: normal;
+  letter-spacing: .05em;
   line-height: 1.75;
   margin-bottom: 2em;
 }
@@ -71,14 +103,16 @@ h1 {
 .project.tetris:hover summary{
   display: block;
   float: right;
-  margin: 1em 2em 0 0;
+  margin: 1em 1em 0 0;
+  letter-spacing: normal;
   color: white;
 }
 
 .project.code:hover summary{
   display: block;
   float: right;
-  margin: 1em 2em 0 0;
+  margin: 1em 1em 0 0;
+  letter-spacing: normal;
   font-weight: bolder;
 }
 
@@ -86,10 +120,16 @@ h1 {
   h1 {
     font-size: 2em; 
   }
+  .projects-grid .c-6:not(:first-child) {
+    padding: 1em 0 0 0;
+  }
 }
 
 @media screen and (max-width: 500px) {
   h1 {
     font-size: 1.5em; 
+  }
+  .projects-grid .c-6:not(:first-child) {
+    padding: 1em 0 0 0;
   }
 }
