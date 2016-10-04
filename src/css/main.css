@@ -34,82 +34,42 @@ h1 {
   font-weight: bold;
 }
 
-.projects-grid .c-4 {
-  border: none;
-}
-
-.projects-grid .c-6:not(:first-child) {
-  padding-left: 2em;
+.projects {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .project {
-  text-align: center;
+  background-color: yellow;
+  height: 326px;
+  margin: 10px;
+  width: 500px;
+  text-align: left;
 }
 
-.project h3{
-  display:none;
-  font-family: 'Lato', sans-serif;
-  font-size: 1.5em;
+.project.code {
+  background: url(../assets/code.png) no-repeat center;
+}
+.project.tetris {
+  background: url(../assets/tetris.jpg) no-repeat center;
   color: white;
 }
 
 .project summary {
-  display: none;
-  font-family: 'Lato', sans-serif;
-  font-size: 1.4em;
-  font-style: italic;
-}
-
-.project.code {
-  background: url(../assets/code.png) no-repeat center;;
-  height: 326px;
-}
-
-.project.tetris {
-  background: url(../assets/tetris.jpg) no-repeat center;;
-  height: 326px;
-}
-
-
-.project.tetris:hover summary{
-  color: white;
-}
-
-.project.code:hover summary{
-  font-weight: bolder;
-}
-
-.project:hover summary{
-  margin: 1em 5em 0 0;
-  display: block;
-  float: right;
-  letter-spacing: normal;
-}
-
-
-@media screen min-width: 900px {
+  padding: 10px;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 900px) and (min-width: 501px) {
   h1 {
     font-size: 2em; 
   }
-  .projects-grid .c-6:not(:first-child) {
-    padding: 1em 0 0 0;
-  }
-  .project:hover summary{
-    margin: 1em 3em 0 0;
-  }
 }
 
 @media screen and (max-width: 500px) {
   h1 {
     font-size: 1.5em; 
-  }
-  .projects-grid .c-6:not(:first-child) {
-    padding: 1em 0 0 0;
-  }
-  .project:hover summary{
-    margin: 1em 1em 0 0;
   }
 }
