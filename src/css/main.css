@@ -5,7 +5,6 @@
 
 body {
   font-family: 'Lato', sans-serif;
-  letter-spacing: .2em;
 }
 
 .header {
@@ -23,34 +22,6 @@ body {
   margin-right: 1em;
 }
 
-nav {
-  float: right;
-}
-
-nav ul {
-  margin: 0;
-  list-style: none;
-}
-
-nav ul li {
-  display: inline-block;
-}
-
-nav ul li:not(:first-child) {
-  padding-left: 3em;
-}
-
-nav ul li.selected {
-  padding: 0 .5em .5em .5em;
-  padding-left: .5em;
-  padding-right: .5em;
-  border-bottom: .1em solid grey;
-}
-
-nav ul li.selected {
-  border-bottom: .1em solid grey;
-}
-
 h1 {
   font-size: 2.75em; 
   font-weight: normal;
@@ -63,73 +34,42 @@ h1 {
   font-weight: bold;
 }
 
-.projects-grid .c-4 {
-  border: none;
-}
-
-.projects-grid .c-6:not(:first-child) {
-  padding-left: 2em;
+.projects {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .project {
-  text-align: center;
+  background-color: yellow;
+  height: 326px;
+  margin: 10px;
+  width: 500px;
+  text-align: left;
 }
 
-.project h3{
-  display:none;
-  font-family: 'Lato', sans-serif;
-  font-size: 1.5em;
+.project.code {
+  background: url(../assets/code.png) no-repeat center;
+}
+.project.tetris {
+  background: url(../assets/tetris.jpg) no-repeat center;
   color: white;
 }
 
 .project summary {
-  display: none;
-  font-family: 'Lato', sans-serif;
-  font-size: 1.4em;
-  font-style: italic;
-}
-
-.project.code {
-  background: url(../assets/code.png) no-repeat center;;
-  height: 326px;
-}
-
-.project.tetris {
-  background: url(../assets/tetris.jpg) no-repeat center;;
-  height: 326px;
-}
-
-
-.project.tetris:hover summary{
-  display: block;
-  float: right;
-  margin: 1em 1em 0 0;
-  letter-spacing: normal;
-  color: white;
-}
-
-.project.code:hover summary{
-  display: block;
-  float: right;
-  margin: 1em 1em 0 0;
-  letter-spacing: normal;
-  font-weight: bolder;
+  padding: 10px;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 900px) and (min-width: 501px) {
   h1 {
     font-size: 2em; 
   }
-  .projects-grid .c-6:not(:first-child) {
-    padding: 1em 0 0 0;
-  }
 }
 
 @media screen and (max-width: 500px) {
   h1 {
     font-size: 1.5em; 
-  }
-  .projects-grid .c-6:not(:first-child) {
-    padding: 1em 0 0 0;
   }
 }
